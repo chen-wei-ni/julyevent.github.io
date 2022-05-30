@@ -1221,14 +1221,14 @@ ul {
     line-height: 1.8;
   }
   .header .header-container {
-    padding: .3rem;
+    padding: .4rem;
   }
   .header .header-container .logo {
-    width: 65px;
+    width: 75px;
     padding: 0;
   }
   .language-pack .language-icon {
-    padding: .2rem .5rem;
+    padding: .3rem .5rem;
   }
   .language-pack .language-icon img {
     width: 20px;
