@@ -107,3 +107,13 @@ setTimeout(function(){
 	ribbonS.classList.remove('ribbonStart');
 },2800)
 
+/*mouseMove*/
+
+var mouse = document.querySelector('.mouseMove');
+var el = document.body
+function mouseMove(e){
+	mouse.style.left = e.clientX +'px';
+	mouse.style.top = e.clientY + 'px';
+}
+el.addEventListener('mousemove',mouseMove,false);
+
