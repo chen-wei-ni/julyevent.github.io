@@ -108,12 +108,20 @@ setTimeout(function(){
 },2800)
 
 /*mouseMove*/
-
+var bodyWidth = screen.width;
 var mouse = document.querySelector('.mouseMove');
 var el = document.body
 function mouseMove(e){
 	mouse.style.left = e.clientX +'px';
 	mouse.style.top = e.clientY + 'px';
 }
-el.addEventListener('mousemove',mouseMove,false);
+function mouseOpacity(e){
+	mouse.style.opacity = 0;
+}
+
+if(bodyWidth > 768){
+	el.addEventListener('mousemove',mouseMove);
+}else{
+	el.addEventListener('mousemove',mouseOpacity);
+};
 
