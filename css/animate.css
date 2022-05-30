@@ -189,8 +189,8 @@
               transform: translateY(0);
     }
     100% {
-      -webkit-transform: translateY(-25px);
-              transform: translateY(-25px);
+      -webkit-transform: translateY(-20px);
+              transform: translateY(-20px);
       filter: brightness(130%);
     }
   }
@@ -364,15 +364,15 @@
 
 @keyframes brightness{
   0%{
-    filter: brightness(100%) grayscale(10%);
+    filter: brightness(100%) grayscale(0%);
   }
   50% {
     filter: brightness(150%) grayscale(90%);
-    transform: scale(1.01);
-    opacity: 0.2;
+    transform: scale(1.05);
+    opacity: 0.3;
   }
   100%{
-    filter: brightness(150%) grayscale(90%);
+    filter: brightness(130%) grayscale(90%);
   }
 
 }

@@ -229,10 +229,19 @@ ul {
 }
 
 .site-main-wrapper .pc-mode .glow .cristal3 {
+  width: 400px;
   right: 6%;
   top: -2%;
   -webkit-animation-delay: -8s;
           animation-delay: -8s;
+}
+
+.site-main-wrapper .pc-mode .glow .cristal4 {
+  width: 220px;
+  left: 42%;
+  top: -2%;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
 }
 
 .site-main-wrapper .pc-mode .character {
@@ -1212,14 +1221,14 @@ ul {
     line-height: 1.8;
   }
   .header .header-container {
-    padding: .4rem;
+    padding: .3rem;
   }
   .header .header-container .logo {
-    width: 80px;
+    width: 65px;
     padding: 0;
   }
   .language-pack .language-icon {
-    padding: .4rem .5rem;
+    padding: .2rem .5rem;
   }
   .language-pack .language-icon img {
     width: 20px;
