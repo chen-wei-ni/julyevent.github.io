@@ -1002,11 +1002,16 @@ ul {
             animation-delay: -1s;
   }
   .site-main-wrapper .pc-mode .glow .cristal3 {
-    right: -17%;
-    width: 50%;
-    top: -3%;
+    right: -12%;
+    width: 240px;
+    top: 6%;
     -webkit-animation-delay: -8s;
             animation-delay: -8s;
+  }
+  .site-main-wrapper .pc-mode .glow .cristal4 {
+    width: 100px;
+    left: 35%;
+    top: -20%;
   }
   .site-main-wrapper .pc-mode .character {
     position: absolute;
