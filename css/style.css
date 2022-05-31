@@ -213,8 +213,8 @@ ul {
 
 .site-main-wrapper .pc-mode .glow [class^='cristal'] {
   position: absolute;
-  -webkit-animation: flip-vertical-left 8s infinite alternate;
-          animation: flip-vertical-left 8s infinite alternate;
+  -webkit-animation: flip-vertical-left 12s  ease infinite alternate;
+          animation: flip-vertical-left 12s  ease infinite alternate;
 }
 
 .site-main-wrapper .pc-mode .glow .cristal1 {
@@ -281,7 +281,8 @@ ul {
   background: url("../images/events/float-items.png") top center no-repeat;
   background-size: auto 100%, auto;
   mix-blend-mode: screen;
-  animation: brightness 5s infinite alternate-reverse;
+  -webkit-animation: brightness 4s infinite both alternate;
+          animation: brightness 4s infinite both alternate;
 }
 
 .site-main-wrapper .pc-mode .treasure {
