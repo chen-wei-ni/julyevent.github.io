@@ -242,6 +242,8 @@ ul {
   top: -2%;
   -webkit-animation-delay: -3s;
           animation-delay: -3s;
+  -webkit-transform: rotate(-80deg);
+          transform: rotate(-80deg);
 }
 
 .site-main-wrapper .pc-mode .character {
@@ -268,6 +270,8 @@ ul {
 .site-main-wrapper .pc-mode .ribbonStart {
   -webkit-animation: jello-horizontal 1.2s both;
           animation: jello-horizontal 1.2s both;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
 }
 
 .site-main-wrapper .pc-mode .connect-part {
@@ -913,6 +917,10 @@ ul {
   }
   .site-main-wrapper .pc-mode .background, .site-main-wrapper .pc-mode .glow, .site-main-wrapper .pc-mode .character, .site-main-wrapper .pc-mode .character-right, .site-main-wrapper .pc-mode .treasure, .site-main-wrapper .pc-mode .ribbon, .site-main-wrapper .pc-mode .banner-slogan-cn, .site-main-wrapper .pc-mode .banner-slogan-en, .site-main-wrapper .pc-mode .banner-slogan-id, .site-main-wrapper .pc-mode .banner-slogan-jp, .site-main-wrapper .pc-mode .banner-slogan-kr, .site-main-wrapper .pc-mode .banner-slogan-th, .site-main-wrapper .pc-mode .banner-slogan-tw, .site-main-wrapper .pc-mode .banner-slogan-vn, .site-main-wrapper .pc-mode .connect-part {
     height: 475px;
+  }
+  .site-main-wrapper .pc-mode .bnTitle {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
   .site-main-wrapper .pc-mode .glow .cristal3 {
     width: 38%;

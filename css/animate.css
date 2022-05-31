@@ -357,7 +357,7 @@
     transform: scale(1.01) rotate(360deg) translateX(0px) translateY(2px) rotate(-360deg);
   }
   100%{
-    transform: scale(1.01) rotate(0deg) translateX(0px) translateY(50px) rotate(0deg);
+    transform: scale(1) rotate(0deg) translateX(-20px) translateY(50px) rotate(0deg);
     filter: brightness(120%) drop-shadow(0 0 0.75rem rgb(225, 251, 255));
   }
 }

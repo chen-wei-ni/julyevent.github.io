@@ -65,6 +65,7 @@ anime({
 	scale: [0,1],
 	duration: 700,
 	easing: 'spring(1, 80, 10, 0)',
+	delay: 200,
 	complete: function () {
         animationDone = true;
 		animateAdd();

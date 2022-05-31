@@ -163,6 +163,7 @@ ul
                 left: 42%
                 top: -2%
                 animation-delay: -3s
+                transform: rotate(-80deg)
         .character
             position: absolute
             +size(100%,44vw)
@@ -184,6 +185,7 @@ ul
             background-size: auto 100%, auto
         .ribbonStart
             animation: jello-horizontal 1.2s both 
+            animation-delay: 200ms
         .connect-part
             +pos()
             +size(100%,44vw)
@@ -591,6 +593,8 @@ ul
         height: 475px
         .background, .glow, .character, .character-right, .treasure, .ribbon, .banner-slogan-cn, .banner-slogan-en, .banner-slogan-id, .banner-slogan-jp, .banner-slogan-kr, .banner-slogan-th, .banner-slogan-tw, .banner-slogan-vn, .connect-part
             height: 475px
+        .bnTitle
+            transform: translateX(10px)
         .glow
             .cristal3
                 width: 38%
