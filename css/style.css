@@ -89,7 +89,7 @@ ul {
   background: transparent;
   border-radius: 30px;
   border: 2px solid #ffffff;
-  padding: .4rem .6rem;
+  padding: .6rem .8rem;
   cursor: pointer;
   min-width: 80px;
   mix-blend-mode: difference;
@@ -181,7 +181,11 @@ ul {
   color: #44e993;
 }
 
-.switch-list ul li a .circle {
+.switch-list ul li .selected {
+  color: #44e993;
+}
+
+.switch-list ul li .selected span {
   display: block;
   width: 5px;
   height: 5px;
@@ -1265,7 +1269,7 @@ ul {
     padding: 0;
   }
   .language-pack .language-icon {
-    padding: .3rem .5rem;
+    padding: .4rem .6rem;
   }
   .language-pack .language-icon img {
     width: 20px;
