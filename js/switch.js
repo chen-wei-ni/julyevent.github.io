@@ -61,9 +61,16 @@ animateTitle.classList.add('effect');
 
 var scaleItem = document.querySelector('.bnTitle');
 anime({
-	targets: scaleItem,
-	scale: [0,1],
-	duration: 700,
+	targets: scaleItem,	
+	keyframes: [
+		{translateY: '-800'},
+		{perspective: 800},
+		{rotateX: 720},
+		{translateY: 0},		
+		{rotateX: 0},	
+	  ],
+	scale: [0.1,1],	
+	duration: 800,
 	easing: 'spring(1, 80, 10, 0)',
 	delay: 200,
 	complete: function () {
@@ -74,54 +81,54 @@ anime({
 
 function animateAdd(){
 	scaleItem.classList.add('effect');
-	// scaleItem.addEventListener('animationend', ()=>{
-	// 	scaleItem.classList.remove('effect');
-	// 	setTimeout(function(){
-	// 		scaleItem.classList.add('effect');
-	// 	},3000)
-	// })
+	scaleItem.addEventListener('animationend', ()=>{
+		scaleItem.classList.remove('effect');
+		setTimeout(function(){
+			scaleItem.classList.add('effect');
+		},3000)
+	})
 } 
 
-var ribbonS = document.querySelector('.ribbon');
-anime({
-	targets: ribbonS,
-	scale: [
-		{value: 1.15, easing: 'easeOutSine', duration: 50},
-		{value: 1, easing: 'easeInOutQuad', duration: 80}
-	  ],
-	  scaleY: [
-		{value: 1.1, easing: 'easeOutSine', duration: 50},
-		{value: 0.9, easing: 'easeInOutQuad', duration: 100}
-	  ],
-	// scale: {
-	// 		value: 1.1,
-	// 		duration: 1600,
-	// 		easing: 'easeInOutQuart',
-	// 		delay: 100		
-	// },	
-	loop: true,
-	delay: 800,
-	direction: 'alternate'
-});
+// var ribbonS = document.querySelector('.ribbon');
+// anime({
+// 	targets: ribbonS,
+// 	scale: [
+// 		{value: 1.15, easing: 'easeOutSine', duration: 50},
+// 		{value: 1, easing: 'easeInOutQuad', duration: 80}
+// 	  ],
+// 	  scaleY: [
+// 		{value: 1.1, easing: 'easeOutSine', duration: 50},
+// 		{value: 0.9, easing: 'easeInOutQuad', duration: 100}
+// 	  ],
+// 	// scale: {
+// 	// 		value: 1.1,
+// 	// 		duration: 1600,
+// 	// 		easing: 'easeInOutQuart',
+// 	// 		delay: 100		
+// 	// },	
+// 	loop: true,
+// 	delay: 800,
+// 	direction: 'alternate'
+// });
 
-setTimeout(function(){
-	ribbonS.classList.remove('ribbonStart');
-},2800)
+// setTimeout(function(){
+// 	ribbonS.classList.remove('ribbonStart');
+// },2800)
 
 /*mouseMove*/
-var bodyWidth = screen.width;
-var mouse = document.querySelector('.mouseMove');
-var el = document.body
-function mouseMove(e){
-	mouse.style.left = e.clientX +'px';
-	mouse.style.top = e.clientY + 'px';
-}
-function mouseOpacity(e){
-	mouse.style.opacity = 0;
-}
+// var bodyWidth = screen.width;
+// var mouse = document.querySelector('.mouseMove');
+// var el = document.body
+// function mouseMove(e){
+// 	mouse.style.left = e.clientX +'px';
+// 	mouse.style.top = e.clientY + 'px';
+// }
+// function mouseOpacity(e){
+// 	mouse.style.opacity = 0;
+// }
 
-if(bodyWidth > 768){
-	el.addEventListener('mousemove',mouseMove);
-}else{
-	el.addEventListener('mousemove',mouseOpacity);
-};
+// if(bodyWidth > 768){
+// 	el.addEventListener('mousemove',mouseMove);
+// }else{
+// 	el.addEventListener('mousemove',mouseOpacity);
+// };

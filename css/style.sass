@@ -90,7 +90,7 @@ ul
     right: 2rem
     margin-right: 2rem
     background: #141414fe
-    padding: 1rem 1rem 2rem 1rem
+    padding: 1rem 1.8rem 2rem 1.8rem
     z-index: 99
     &::before
         content: ""
@@ -105,7 +105,7 @@ ul
         top: -2.5rem
     ul 
         &:nth-child(1)
-            margin-right: 25px
+            margin-right: 22px
         p
             color: #ffffff7d
             padding: .6rem 0 .6rem 1rem
@@ -144,8 +144,8 @@ ul
                 display: none
 /*--site-main-wrapper START!--*/
 .site-main-wrapper
-    background-color: #483603
-    animation: color-change-2x 2s linear infinite alternate both
+    background-color: #030f48
+    // animation: color-change-2x 2s linear infinite alternate both
     .pc-mode
         position: relative
         overflow: hidden
@@ -159,38 +159,38 @@ ul
             background-size: auto 100%, auto
             // animation: kenburns-right 6s infinite alternate both
         .glow
-            position: relative
             +size(100%,44vw)
-            /*background: url('../images/events/cristal.png') top center no-repeat*/
             background-size: auto 100%, auto
             position: absolute
             [class^='cristal']
                 +pos()
-                animation: flip-vertical-left 12s  ease infinite alternate
+                animation: rotateflowers 13s linear infinite 
             .cristal1
-                left: 10%
+                right: 0%
+                bottom: 1%
+                width: 200px
+                animation-direction: reverse
             .cristal2
-                left: 2%
-                top: 15%
-                animation-delay: -1s
+                left: 5%
+                bottom: 15%
+                animation-delay: -3s
+                animation-direction: reverse
             .cristal3
-                width: 400px
-                right: 6%
-                top: -2%
+                width: 50px
+                right: 10%
+                top: 25%
                 animation-delay: -8s
             .cristal4
-                width: 220px
-                left: 42%
-                top: -2%
-                animation-delay: -3s
-                transform: rotate(-80deg)
+                width: 120px
+                right: 12%
+                top: 5%
+                animation-delay: -6s
         .character
             position: absolute
             +size(100%,44vw)
             background: url('../images/events/character_01.png') top center no-repeat
             background-size: auto 100%, auto
             transition: 1.2s ease
-            animation: lightCharactor 2s infinite alternate
             /*animation: showUp 8s both infinite
         /*.character-right
             position: absolute
@@ -201,29 +201,32 @@ ul
         .ribbon
             +pos()
             +size(100%,44vw)
-            background: url('../images/events/ribbon.png') top center no-repeat
+            background: url('../images/events/shine.png') top center no-repeat
             background-size: auto 100%, auto
+            mix-blend-mode: overlay
         .ribbonStart
-            animation: jello-horizontal 1.2s both 
-            animation-delay: 200ms
+            animation: moveLight 6s both infinite
+            animation-delay: 1000ms
         .connect-part
             +pos()
             +size(100%,44vw)
             background: url('../images/events/float-items.png') top center no-repeat
             background-size: auto 100%, auto            
             mix-blend-mode: screen
-            animation: brightness 4s infinite both alternate
+            animation: brightness 5s infinite both alternate
         .treasure
             +pos()
             +size(100%,44vw)
             background: url('../images/events/background-treasure_01.png') top center 
             background-repeat: repeat-x
-            background-size: auto 100%, auto            
+            background-size: auto 100%, auto  
+            mix-blend-mode: screen        
         .banner-slogan-cn
             +pos()
             +size(100%,44vw)
             background: url('../images/events/slogan_cn.png') top center no-repeat
             background-size: auto 100%, auto
+ 
         .banner-slogan-en
             +pos()
             +size(100%,44vw)
@@ -259,6 +262,7 @@ ul
             +size(100%,44vw)
             background: url('../images/events/slogan_vn.png') top center no-repeat
             background-size: auto 100%, auto
+
 /** -- prize-- **/
 .main
     position: relative
@@ -270,8 +274,8 @@ ul
     .treasure-container
         width: 1170px
         border-radius: 10px
-        box-shadow: inset 0 0 25px #f06dff
-        background: linear-gradient(120deg, #4f0172 0%, #a004b2 43%, #e72cff 60%, #360346 100%)
+        box-shadow: inset 0 0 25px #6dd3ff
+        background: linear-gradient(120deg, #07174e 0%, #0428a9 43%, #037cff 60%, #071852 100%)
         .treasure-img
             position: relative
             display: inline-block
@@ -336,26 +340,26 @@ ul
         font-size: 3.8rem
         margin: 0 0 1rem 0
         position: relative
-        &::before,&::after
-            content: ''  
-            width: 55px
-            height: 55px
-            display: block
-            background-color: transparent
-            background-image: url('../images/events/star.png') 
-            background-repeat: no-repeat
-            background-size: 100%
-            +pos()
-            left: 26rem
-            top: 10px
-        &::after
-            right: 26rem
-            left: inherit
+        // 標題icon
+        // &::before,&::after
+        //     content: ''  
+        //     width: 55px
+        //     height: 55px
+        //     display: inline-block
+        //     background-color: transparent
+        //     background-image: url('../images/events/star.png') 
+        //     background-repeat: no-repeat
+        //     background-size: 100%
+        //     vertical-align: baseline
+        // &::before
+        //     margin-right: 10px
+        // &::after
+        //     margin-left: 10px
     .part
         width: 1170px
         border-radius: 10px
-        box-shadow: inset 0 0 25px #f06dff
-        background: linear-gradient(120deg, #4f0172 0%, #a004b2 43%, #e72cff 60%, #360346 100%)
+        box-shadow: inset 0 0 25px #6dd3ff
+        background: linear-gradient(120deg, #07174e 0%, #0428a9 43%, #037cff 60%, #071852 100%)
         padding: 2.5rem 1.8rem
         .select-game
             display: flex
@@ -405,7 +409,7 @@ ul
     top: -6rem
 .details
     display: flex
-    justify-content: center
+    justify-content: space-around
     .word
         flex-basis: 54%
         padding-right: 2rem
@@ -430,45 +434,55 @@ ul
                 display: inline-block
                 padding-right: .5rem
     .decorate-img
-        flex-basis: 38%
+        flex-basis: 30%
         animation: shine-item 5s infinite both
-.table
-    width: 100%
-    padding: 1rem 2.5rem 0 2.5rem
-    ul
-        li
-            display: flex
-            text-align: center
-            &:nth-child(1)
-                border: none
-                background-color: transparent !important
-            &:nth-child(odd)
+.all_table
+    display: flex
+    margin-top: .5rem 
+    padding: 0 1.5rem
+    .table
+        width: 100%
+        &:nth-child(1)
+            margin: 0 1rem 0 0
+        ul
+            h3
+                color: #ffe600
+                font-size: 1rem
+                margin: 0 0 .8rem .5rem
+            li
+                display: flex
+                text-align: center
+                &:nth-child(1)
+                    border: none
+                    background-color: transparent !important
+                &:nth-child(even)
+                    span
+                        background-color: rgba(#000,0.28)
+                span 
+                    display: block
+                    color: #fff
+                    padding: .8rem 0
+                    &:nth-child(1)
+                        width: 30%
+                        margin-right: 3px
+                    &:nth-child(2)
+                        width: 70%
+            .colored
                 span
-                    background-color: rgba(#000,0.28)
-            span 
-                display: block
-                color: #fff
-                padding: .8rem 0
-                &:nth-child(1)
-                    width: 30%
-                    margin-right: 3px
-                &:nth-child(2)
-                    width: 70%
-        .colored
-            span
-                color: #ffffff  
-                padding: .7rem 0
-                font-weight: bold
-                text-shadow: 1px 1px 3px rgba(#000,0.5)
-                &:nth-child(1)
-                    background: linear-gradient(180deg, #ffefd0 0%, #ff288c 28%, transparent 100%)
-                    border-radius: 20px 20px 0 0
-                &:nth-child(2)
-                    background: linear-gradient(180deg, #ffefd0 0%, #ff288c 28%, transparent 100%)
-                    border-radius: 20px 20px 0 0
+                    color: #ffffff  
+                    padding: .8rem 0
+                    font-weight: bold
+                    text-shadow: 1px 1px 3px rgba(#000,0.5)
+                    &:nth-child(1)
+                        background: linear-gradient(180deg, #ffefd0 0%, #a700fd 28%, transparent 100%)
+                        border-radius: 20px 20px 0 0
+
+                    &:nth-child(2)
+                        background: linear-gradient(180deg, #ffefd0 0%, #a700fd 28%, transparent 100%)
+                        border-radius: 20px 20px 0 0
                     
 .annoucement
-    background-color: #032b34
+    background-color: #001d86
     display: flex
     justify-content: center
     .desc
@@ -535,8 +549,6 @@ ul
         .background, .glow, .character, .character-right, .treasure, .ribbon, .banner-slogan-cn, .banner-slogan-en, .banner-slogan-id, .banner-slogan-jp, .banner-slogan-kr, .banner-slogan-th, .banner-slogan-tw, .banner-slogan-vn, .connect-part
             height: 565px
         .glow
-            .cristal3
-                right: -5%
     .prize-box
         top: -7rem
         .treasure-container
@@ -555,10 +567,6 @@ ul
         .part
             width: 954px
         h2
-            &::before
-                left: 19rem
-            &::after
-                right: 19rem
     .pic
         width: 95%
         margin: 0 auto
@@ -589,12 +597,6 @@ ul
         top: -6rem
     .square h2
         font-size: 3rem
-        &::before
-            left: 16rem
-            top: 0
-        &::after
-            right: 16rem
-            top: 0
     .square .part
         width: 800px
     .event
@@ -616,9 +618,7 @@ ul
         .bnTitle
             transform: translateX(10px)
         .glow
-            .cristal3
-                width: 38%
-                right: -15%
+
     .prize-box
         top: -5rem
     .prize-box .treasure-container
@@ -632,10 +632,6 @@ ul
         top: -3rem
     .square 
         h2
-            &::before
-                left: 14rem
-            &::after
-                right: 14rem
         .part
             width: 744px
     .details .word
@@ -664,21 +660,21 @@ ul
                 // background: url('../images/events/cristal_mb.png') top center no-repeat
                 background-size: 100%
                 .cristal1
-                    left: 2%
+                    right: -6%
+                    bottom: 16%
+                    width: 100px
                 .cristal2
-                    left: 22%
-                    top: 30%
-                    width: 15%
+                    left: -5%
+                    bottom: 30%
+                    width: 130px
                     animation-delay: -1s
                 .cristal3
-                    right: -12%
-                    width: 240px
-                    top: 6%
+                    right: 2%
+                    top: 33%
+                    width: 40px
                     animation-delay: -8s
                 .cristal4
-                    width: 100px
-                    left: 35%
-                    top: -20%
+                    right: -8%
             .character
                 position: absolute
                 width: 100%
@@ -695,8 +691,11 @@ ul
                 position: absolute
                 width: 100%
                 height: 100%
-                background: url('../images/events/ribbon_mb.png') top center no-repeat
+                background: url('../images/events/shine_mb.png') top center no-repeat
                 background-size: 100%
+            .ribbonStart
+                animation: moveLight_mb 5s both infinite
+                animation-delay: 800ms
             .connect-part
                 position: absolute
                 width: 100%
@@ -708,6 +707,7 @@ ul
                 +size(100%)
                 background: url('../images/events/flowCloud.png') top center 
                 background-size: 100%
+                mix-blend-mode: normal
             .banner-slogan-cn
                 position: absolute
                 +size(100%)
@@ -748,6 +748,11 @@ ul
                 +size(100%)
                 background: url('../images/events/mb_slogan-vn.png') top center no-repeat
                 background-size: 100%
+    .switch-list
+        padding: 1rem
+        ul
+            &:nth-child(1)
+                margin-right: 15px
     .prize-box 
         display: block
         .treasure-container
@@ -786,15 +791,12 @@ ul
                     margin: 0 0 -5px 0
                     font-size: 2rem
     .square 
+        margin-top: 2rem
         h2
-            &::before
-                width: 45px
-                height: 45px
-                left: 25%
-            &::after
-                width: 45px
-                height: 45px
-                right: 25%
+            font-size: 2.2rem
+            &::before,&::after
+                +size(38px)
+                vertical-align: middle
         .part
             width: 100%
             padding: 1.2rem 1rem
@@ -809,10 +811,6 @@ ul
             margin: 2rem auto 0 auto
         .text-prize
             padding: .5rem 0
-    .square
-        margin-top: 2rem
-        h2
-            font-size: 2.5rem
     .square .part 
         .select-game
             display: grid
@@ -835,8 +833,13 @@ ul
             position: absolute
             right: .5rem
             bottom: 50%
+    .all_table
+        flex-direction: column
+        padding: 0
     .table
         padding: 0
+        &:nth-child(2)
+            margin-top: 2rem
     .annoucement 
         .desc
             width: 100%
@@ -867,20 +870,7 @@ ul
         right: .5rem
         p
             +size(70px)
-@media screen and ( max-width: 500px )
-    .square
-        h2
-            &::before
-                left: 20%
-            &::after
-                right: 20%
-@media screen and ( max-width: 415px )
-    .square
-        h2
-            &::before
-                left: 12%
-            &::after
-                right: 12%
+
 @media screen and ( max-width: 320px )
     .prize-box .treasure-container 
         .treasure-img .inner-img
@@ -890,12 +880,5 @@ ul
     .square
         h2
             &::before
-                width: 35px
-                height: 35px
-                left: 6%
-                top: 8px
+
             &::after
-                width: 35px
-                height: 35px
-                right: 6%
-                top: 8px

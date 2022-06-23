@@ -125,7 +125,7 @@ ul {
   right: 2rem;
   margin-right: 2rem;
   background: #141414fe;
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 1rem 1.8rem 2rem 1.8rem;
   z-index: 99;
 }
 
@@ -143,7 +143,7 @@ ul {
 }
 
 .switch-list ul:nth-child(1) {
-  margin-right: 25px;
+  margin-right: 22px;
 }
 
 .switch-list ul p {
@@ -203,9 +203,7 @@ ul {
 
 /*--site-main-wrapper START!--*/
 .site-main-wrapper {
-  background-color: #483603;
-  -webkit-animation: color-change-2x 2s linear infinite alternate both;
-          animation: color-change-2x 2s linear infinite alternate both;
+  background-color: #030f48;
 }
 
 .site-main-wrapper .pc-mode {
@@ -230,47 +228,47 @@ ul {
 }
 
 .site-main-wrapper .pc-mode .glow {
-  position: relative;
   width: 100%;
   height: 44vw;
-  /*background: url('../images/events/cristal.png') top center no-repeat*/
   background-size: auto 100%, auto;
   position: absolute;
 }
 
 .site-main-wrapper .pc-mode .glow [class^='cristal'] {
   position: absolute;
-  -webkit-animation: flip-vertical-left 12s  ease infinite alternate;
-          animation: flip-vertical-left 12s  ease infinite alternate;
+  -webkit-animation: rotateflowers 13s linear infinite;
+          animation: rotateflowers 13s linear infinite;
 }
 
 .site-main-wrapper .pc-mode .glow .cristal1 {
-  left: 10%;
+  right: 0%;
+  bottom: 1%;
+  width: 200px;
+  animation-direction: reverse;
 }
 
 .site-main-wrapper .pc-mode .glow .cristal2 {
-  left: 2%;
-  top: 15%;
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
+  left: 5%;
+  bottom: 15%;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  animation-direction: reverse;
 }
 
 .site-main-wrapper .pc-mode .glow .cristal3 {
-  width: 400px;
-  right: 6%;
-  top: -2%;
+  width: 50px;
+  right: 10%;
+  top: 25%;
   -webkit-animation-delay: -8s;
           animation-delay: -8s;
 }
 
 .site-main-wrapper .pc-mode .glow .cristal4 {
-  width: 220px;
-  left: 42%;
-  top: -2%;
-  -webkit-animation-delay: -3s;
-          animation-delay: -3s;
-  -webkit-transform: rotate(-80deg);
-          transform: rotate(-80deg);
+  width: 120px;
+  right: 12%;
+  top: 5%;
+  -webkit-animation-delay: -6s;
+          animation-delay: -6s;
 }
 
 .site-main-wrapper .pc-mode .character {
@@ -281,8 +279,6 @@ ul {
   background-size: auto 100%, auto;
   -webkit-transition: 1.2s ease;
   transition: 1.2s ease;
-  -webkit-animation: lightCharactor 2s infinite alternate;
-          animation: lightCharactor 2s infinite alternate;
   /*animation: showUp 8s both infinite */
 }
 
@@ -290,15 +286,16 @@ ul {
   position: absolute;
   width: 100%;
   height: 44vw;
-  background: url("../images/events/ribbon.png") top center no-repeat;
+  background: url("../images/events/shine.png") top center no-repeat;
   background-size: auto 100%, auto;
+  mix-blend-mode: overlay;
 }
 
 .site-main-wrapper .pc-mode .ribbonStart {
-  -webkit-animation: jello-horizontal 1.2s both;
-          animation: jello-horizontal 1.2s both;
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
+  -webkit-animation: moveLight 6s both infinite;
+          animation: moveLight 6s both infinite;
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
 }
 
 .site-main-wrapper .pc-mode .connect-part {
@@ -308,8 +305,8 @@ ul {
   background: url("../images/events/float-items.png") top center no-repeat;
   background-size: auto 100%, auto;
   mix-blend-mode: screen;
-  -webkit-animation: brightness 4s infinite both alternate;
-          animation: brightness 4s infinite both alternate;
+  -webkit-animation: brightness 5s infinite both alternate;
+          animation: brightness 5s infinite both alternate;
 }
 
 .site-main-wrapper .pc-mode .treasure {
@@ -319,6 +316,7 @@ ul {
   background: url("../images/events/background-treasure_01.png") top center;
   background-repeat: repeat-x;
   background-size: auto 100%, auto;
+  mix-blend-mode: screen;
 }
 
 .site-main-wrapper .pc-mode .banner-slogan-cn {
@@ -401,9 +399,9 @@ ul {
 .prize-box .treasure-container {
   width: 1170px;
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 25px #f06dff;
-          box-shadow: inset 0 0 25px #f06dff;
-  background: linear-gradient(120deg, #4f0172 0%, #a004b2 43%, #e72cff 60%, #360346 100%);
+  -webkit-box-shadow: inset 0 0 25px #6dd3ff;
+          box-shadow: inset 0 0 25px #6dd3ff;
+  background: linear-gradient(120deg, #07174e 0%, #0428a9 43%, #037cff 60%, #071852 100%);
 }
 
 .prize-box .treasure-container .treasure-img {
@@ -500,31 +498,12 @@ ul {
   position: relative;
 }
 
-.square h2::before, .square h2::after {
-  content: '';
-  width: 55px;
-  height: 55px;
-  display: block;
-  background-color: transparent;
-  background-image: url("../images/events/star.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  position: absolute;
-  left: 26rem;
-  top: 10px;
-}
-
-.square h2::after {
-  right: 26rem;
-  left: inherit;
-}
-
 .square .part {
   width: 1170px;
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 25px #f06dff;
-          box-shadow: inset 0 0 25px #f06dff;
-  background: linear-gradient(120deg, #4f0172 0%, #a004b2 43%, #e72cff 60%, #360346 100%);
+  -webkit-box-shadow: inset 0 0 25px #6dd3ff;
+          box-shadow: inset 0 0 25px #6dd3ff;
+  background: linear-gradient(120deg, #07174e 0%, #0428a9 43%, #037cff 60%, #071852 100%);
   padding: 2.5rem 1.8rem;
 }
 
@@ -616,9 +595,8 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .details .word {
@@ -660,69 +638,86 @@ ul {
 }
 
 .details .decorate-img {
-  -ms-flex-preferred-size: 38%;
-      flex-basis: 38%;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
   -webkit-animation: shine-item 5s infinite both;
           animation: shine-item 5s infinite both;
 }
 
-.table {
-  width: 100%;
-  padding: 1rem 2.5rem 0 2.5rem;
+.all_table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: .5rem;
+  padding: 0 1.5rem;
 }
 
-.table ul li {
+.all_table .table {
+  width: 100%;
+}
+
+.all_table .table:nth-child(1) {
+  margin: 0 1rem 0 0;
+}
+
+.all_table .table ul h3 {
+  color: #ffe600;
+  font-size: 1rem;
+  margin: 0 0 .8rem .5rem;
+}
+
+.all_table .table ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
 }
 
-.table ul li:nth-child(1) {
+.all_table .table ul li:nth-child(1) {
   border: none;
   background-color: transparent !important;
 }
 
-.table ul li:nth-child(odd) span {
+.all_table .table ul li:nth-child(even) span {
   background-color: rgba(0, 0, 0, 0.28);
 }
 
-.table ul li span {
+.all_table .table ul li span {
   display: block;
   color: #fff;
   padding: .8rem 0;
 }
 
-.table ul li span:nth-child(1) {
+.all_table .table ul li span:nth-child(1) {
   width: 30%;
   margin-right: 3px;
 }
 
-.table ul li span:nth-child(2) {
+.all_table .table ul li span:nth-child(2) {
   width: 70%;
 }
 
-.table ul .colored span {
+.all_table .table ul .colored span {
   color: #ffffff;
-  padding: .7rem 0;
+  padding: .8rem 0;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.table ul .colored span:nth-child(1) {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffefd0), color-stop(28%, #ff288c), to(transparent));
-  background: linear-gradient(180deg, #ffefd0 0%, #ff288c 28%, transparent 100%);
+.all_table .table ul .colored span:nth-child(1) {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffefd0), color-stop(28%, #a700fd), to(transparent));
+  background: linear-gradient(180deg, #ffefd0 0%, #a700fd 28%, transparent 100%);
   border-radius: 20px 20px 0 0;
 }
 
-.table ul .colored span:nth-child(2) {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffefd0), color-stop(28%, #ff288c), to(transparent));
-  background: linear-gradient(180deg, #ffefd0 0%, #ff288c 28%, transparent 100%);
+.all_table .table ul .colored span:nth-child(2) {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffefd0), color-stop(28%, #a700fd), to(transparent));
+  background: linear-gradient(180deg, #ffefd0 0%, #a700fd 28%, transparent 100%);
   border-radius: 20px 20px 0 0;
 }
 
 .annoucement {
-  background-color: #032b34;
+  background-color: #001d86;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -828,9 +823,6 @@ ul {
   .site-main-wrapper .pc-mode .background, .site-main-wrapper .pc-mode .glow, .site-main-wrapper .pc-mode .character, .site-main-wrapper .pc-mode .character-right, .site-main-wrapper .pc-mode .treasure, .site-main-wrapper .pc-mode .ribbon, .site-main-wrapper .pc-mode .banner-slogan-cn, .site-main-wrapper .pc-mode .banner-slogan-en, .site-main-wrapper .pc-mode .banner-slogan-id, .site-main-wrapper .pc-mode .banner-slogan-jp, .site-main-wrapper .pc-mode .banner-slogan-kr, .site-main-wrapper .pc-mode .banner-slogan-th, .site-main-wrapper .pc-mode .banner-slogan-tw, .site-main-wrapper .pc-mode .banner-slogan-vn, .site-main-wrapper .pc-mode .connect-part {
     height: 565px;
   }
-  .site-main-wrapper .pc-mode .glow .cristal3 {
-    right: -5%;
-  }
   .prize-box {
     top: -7rem;
   }
@@ -854,12 +846,6 @@ ul {
   }
   .square .part {
     width: 954px;
-  }
-  .square h2::before {
-    left: 19rem;
-  }
-  .square h2::after {
-    right: 19rem;
   }
   .pic {
     width: 95%;
@@ -906,14 +892,6 @@ ul {
   .square h2 {
     font-size: 3rem;
   }
-  .square h2::before {
-    left: 16rem;
-    top: 0;
-  }
-  .square h2::after {
-    right: 16rem;
-    top: 0;
-  }
   .square .part {
     width: 800px;
   }
@@ -950,10 +928,6 @@ ul {
     -webkit-transform: translateX(10px);
             transform: translateX(10px);
   }
-  .site-main-wrapper .pc-mode .glow .cristal3 {
-    width: 38%;
-    right: -15%;
-  }
   .prize-box {
     top: -5rem;
   }
@@ -969,12 +943,6 @@ ul {
   }
   .chosed-game {
     top: -3rem;
-  }
-  .square h2::before {
-    left: 14rem;
-  }
-  .square h2::after {
-    right: 14rem;
   }
   .square .part {
     width: 744px;
@@ -1020,26 +988,26 @@ ul {
     background-size: 100%;
   }
   .site-main-wrapper .pc-mode .glow .cristal1 {
-    left: 2%;
+    right: -6%;
+    bottom: 16%;
+    width: 100px;
   }
   .site-main-wrapper .pc-mode .glow .cristal2 {
-    left: 22%;
-    top: 30%;
-    width: 15%;
+    left: -5%;
+    bottom: 30%;
+    width: 130px;
     -webkit-animation-delay: -1s;
             animation-delay: -1s;
   }
   .site-main-wrapper .pc-mode .glow .cristal3 {
-    right: -12%;
-    width: 240px;
-    top: 6%;
+    right: 2%;
+    top: 33%;
+    width: 40px;
     -webkit-animation-delay: -8s;
             animation-delay: -8s;
   }
   .site-main-wrapper .pc-mode .glow .cristal4 {
-    width: 100px;
-    left: 35%;
-    top: -20%;
+    right: -8%;
   }
   .site-main-wrapper .pc-mode .character {
     position: absolute;
@@ -1052,8 +1020,14 @@ ul {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url("../images/events/ribbon_mb.png") top center no-repeat;
+    background: url("../images/events/shine_mb.png") top center no-repeat;
     background-size: 100%;
+  }
+  .site-main-wrapper .pc-mode .ribbonStart {
+    -webkit-animation: moveLight_mb 5s both infinite;
+            animation: moveLight_mb 5s both infinite;
+    -webkit-animation-delay: 800ms;
+            animation-delay: 800ms;
   }
   .site-main-wrapper .pc-mode .connect-part {
     position: absolute;
@@ -1068,6 +1042,7 @@ ul {
     height: 100%;
     background: url("../images/events/flowCloud.png") top center;
     background-size: 100%;
+    mix-blend-mode: normal;
   }
   .site-main-wrapper .pc-mode .banner-slogan-cn {
     position: absolute;
@@ -1125,6 +1100,12 @@ ul {
     background: url("../images/events/mb_slogan-vn.png") top center no-repeat;
     background-size: 100%;
   }
+  .switch-list {
+    padding: 1rem;
+  }
+  .switch-list ul:nth-child(1) {
+    margin-right: 15px;
+  }
   .prize-box {
     display: block;
   }
@@ -1177,15 +1158,16 @@ ul {
     margin: 0 0 -5px 0;
     font-size: 2rem;
   }
-  .square h2::before {
-    width: 45px;
-    height: 45px;
-    left: 25%;
+  .square {
+    margin-top: 2rem;
   }
-  .square h2::after {
-    width: 45px;
-    height: 45px;
-    right: 25%;
+  .square h2 {
+    font-size: 2.2rem;
+  }
+  .square h2::before, .square h2::after {
+    width: 38px;
+    height: 38px;
+    vertical-align: middle;
   }
   .square .part {
     width: 100%;
@@ -1204,12 +1186,6 @@ ul {
   }
   .prize-box .text-prize {
     padding: .5rem 0;
-  }
-  .square {
-    margin-top: 2rem;
-  }
-  .square h2 {
-    font-size: 2.5rem;
   }
   .square .part .select-game {
     display: -ms-grid;
@@ -1243,8 +1219,18 @@ ul {
     right: .5rem;
     bottom: 50%;
   }
+  .all_table {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
   .table {
     padding: 0;
+  }
+  .table:nth-child(2) {
+    margin-top: 2rem;
   }
   .annoucement .desc {
     width: 100%;
@@ -1292,42 +1278,12 @@ ul {
   }
 }
 
-@media screen and (max-width: 500px) {
-  .square h2::before {
-    left: 20%;
-  }
-  .square h2::after {
-    right: 20%;
-  }
-}
-
-@media screen and (max-width: 415px) {
-  .square h2::before {
-    left: 12%;
-  }
-  .square h2::after {
-    right: 12%;
-  }
-}
-
 @media screen and (max-width: 320px) {
   .prize-box .treasure-container .treasure-img .inner-img {
     width: 210px;
   }
   .prize-box .treasure-container .text-prize h4 {
     font-size: 9vw;
-  }
-  .square h2::before {
-    width: 35px;
-    height: 35px;
-    left: 6%;
-    top: 8px;
-  }
-  .square h2::after {
-    width: 35px;
-    height: 35px;
-    right: 6%;
-    top: 8px;
   }
 }
 /*# sourceMappingURL=style.css.map */

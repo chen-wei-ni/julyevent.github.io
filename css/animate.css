@@ -74,22 +74,22 @@
               transform: scale(0.8);
       -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
-              filter: brightness(120%);
+              /* filter: brightness(120%); */
     }
-    17% {
-      -webkit-transform: scale(0.98);
-              transform: scale(0.98);
+    16% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
       -webkit-animation-timing-function: ease-out;
               animation-timing-function: ease-out;
     }
     22% {
-      -webkit-transform: scale(0.87);
-              transform: scale(0.87);
+      -webkit-transform: scale(0.82);
+              transform: scale(0.82);
       -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
-              filter: brightness(120%);
+              /* filter: brightness(120%); */
     }
-    30% {
+    28% {
       -webkit-transform: scale(1);
               transform: scale(1);
       -webkit-animation-timing-function: ease-out;
@@ -131,17 +131,17 @@
 @keyframes shine-item {
   0% {
     transform: scale(1);
-    filter: drop-shadow(0mm 0mm 10mm rgb(255, 255, 162)) brightness(100%)
+    filter: drop-shadow(0mm 0mm 10mm rgb(162, 233, 255)) brightness(100%)
   }
 
   50% {
     transform: scale(1.05);
-    filter: drop-shadow(0mm 0mm 15mm rgb(255, 255, 255)) brightness(140%);
+    filter: drop-shadow(0mm 0mm 15mm rgb(255, 255, 255)) brightness(120%);
   }
 
   100% {
     
-    filter: drop-shadow(0mm 0mm 10mm rgb(255, 255, 162)) brightness(100%)
+    filter: drop-shadow(0mm 0mm 10mm rgb(162, 233, 255)) brightness(100%)
   }
 }
   @keyframes flicker-1 {
@@ -173,15 +173,6 @@
     19.01% {
       opacity: 1;
     }
-  }
-  @keyframes flicker-2 {
-    0%,50% {
-      opacity: 1;
-    }
-    25% {
-      opacity: 0;
-      transform: scale(1.2) ;
-    }    
   }
   @keyframes slide-top {
     0% {
@@ -233,7 +224,7 @@
   }
 }
 .effect {
-  animation: slide-top infinite 1.2s cubic-bezier(0.64, 0.42, 0.4, 0.76)  alternate both;
+  animation: heartbeat  1s cubic-bezier(0.64, 0.42, 0.4, 0.76)  alternate both;
   animation-delay: .2s; 
 }
 
@@ -290,37 +281,51 @@
       background-position: 1920px 0;
     }
   }
-
-@keyframes bambooSlash{
-  0%{
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  50%{
-    opacity: 1;
-    filter: brightness(130%) saturate(3);
-  }
-}
+/*shine slash*/
 @keyframes moveLight{
   0% {
     left: 0;
-    transform: translateX(-200px);
+    transform: translateX(-50px);
     opacity: 0;
   }
-
+  2% {
+    left: 0;
+    transform: translateX(-50px);
+    opacity: 0.8;    
+  }
   20% {
     left: 0;
-    transform: translateX(-200px);
+    transform: translateX(500px);
+    filter: brightness(120%);
     opacity: 1;    
-  }
-  35% {
-    left: 0;
-    transform: translateX(390px);
-    opacity: 0;    
   }
   100% {
     left: 0;
-    transform: translateX(-200px);
+    transform: translateX(450px);
+    opacity: 0;    
+  }
+}
+@keyframes moveLight_mb{
+  0% {
+    left: 0;
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  2% {
+    left: 0;
+    transform: translateX(-20px);
+    opacity: 1;    
+  }
+  20% {
+    left: 0;
+    transform: translateX(200px);
+    filter: brightness(120%);
+    opacity: 1;    
+  }
+  100% {
+    left: 0;
+    transform: translateX(200px);
     opacity: 0;    
   }
 }
@@ -345,13 +350,13 @@
 }
 @keyframes color-change-2x {
   0% {
-    background: #00121d;
+    background: #00372f;
   }
   100% {
-    background: #042f37;
+    background: #034881;
   }
 }
-
+/*旋轉*/
 @keyframes flip-vertical-left {
   0% { 
     transform: scale(1.01) rotate(360deg) translateX(0px) translateY(2px) rotate(-360deg);
@@ -361,15 +366,21 @@
     filter: brightness(120%) drop-shadow(0 0 0.75rem rgb(225, 251, 255));
   }
 }
-
+/*選轉花朵*/
+@keyframes rotateflowers {
+  
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 @keyframes brightness{
-  0%{
+  60%{
     filter: brightness(130%);    
   }
 
-  100%{
-    transform: scale(1.02);
-    opacity: 0.4;
+  0%{
+    transform: scale(1.05);
+    opacity: 0;
   }
 
 }
@@ -393,9 +404,3 @@
 
 }
 
-@keyframes lightCharactor {
-  
-  100% {
-    filter:  drop-shadow(0 -6mm 4mm rgb(181, 237, 255))
-  }
-}
